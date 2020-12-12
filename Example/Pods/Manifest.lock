@@ -1,0 +1,24 @@
+PODS:
+  - EasyPeasy (1.9.0)
+  - TFUI (0.1.0):
+    - EasyPeasy (~> 1.9.0)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - TFUI (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - EasyPeasy
+
+EXTERNAL SOURCES:
+  TFUI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EasyPeasy: 19a84ef8f8bbcf925b9fecc29d1d78b7dab96718
+  TFUI: bb73bd982cf96942ca9c3163adbebdeee6fc02aa
+
+PODFILE CHECKSUM: 8edc56a583c98a31c5bb6c19d8009f0ced9e8d80
+
+COCOAPODS: 1.10.0

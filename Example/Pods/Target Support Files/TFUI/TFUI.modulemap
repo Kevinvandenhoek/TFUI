@@ -1,0 +1,6 @@
+framework module TFUI {
+  umbrella header "TFUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

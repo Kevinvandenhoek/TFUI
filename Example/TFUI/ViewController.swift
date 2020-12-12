@@ -7,18 +7,17 @@
 //
 
 import UIKit
+import EasyPeasy
+import TFUI
 
 class ViewController: UIViewController {
+    
+    let scrollView = TFScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.addSubview(scrollView)
+        scrollView.easy.layout(Edges())
+        scrollView.backgroundColor = .orange
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
-

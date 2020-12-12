@@ -4,6 +4,7 @@ platform :ios, '9.0'
 
 target 'TFUI_Example' do
   pod 'TFUI', :path => '../'
+  pod 'EasyPeasy'
 
   target 'TFUI_Tests' do
     inherit! :search_paths

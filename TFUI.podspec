@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'TFUI/Classes/**/*'
+  s.source_files = 'TFUI/Views/**/*', 'TFUI/Protocols/*', 'TFUI/Extensions/*', 'TFUI/Models/*'
   
   # s.resource_bundles = {
   #   'TFUI' => ['TFUI/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'#, 'MapKit'
+  s.dependency 'EasyPeasy', '~> 1.9.0'
 end
