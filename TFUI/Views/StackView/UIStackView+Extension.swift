@@ -98,7 +98,7 @@ extension UIStackView {
     }
 }
 
-extension UIStackView {
+public extension UIStackView {
     
     enum Element: Equatable {
         case view(_ view: UIView, trailingSpace: CGFloat? = nil, insets: UIEdgeInsets? = nil, alignment: CrossAxisAlignment? = nil)
@@ -107,7 +107,7 @@ extension UIStackView {
         /// Use only 1 of these per scroll view
         case scrollViewFiller(minimumHeight: CGFloat, maximumHeight: CGFloat? = nil, view: UIView? = nil)
         
-        enum CrossAxisAlignment {
+        public enum CrossAxisAlignment {
             case start
             case end
             case center

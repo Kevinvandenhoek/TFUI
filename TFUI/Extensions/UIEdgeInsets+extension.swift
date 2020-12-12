@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIEdgeInsets {
+public extension UIEdgeInsets {
     
     // MARK: Helper methods
     static func - (lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> UIEdgeInsets {

@@ -7,37 +7,33 @@
 
 import Foundation
 import UIKit
+import EasyPeasy
 
 open class TFScrollView: UIScrollView, UpdatableView {
     
-    // MARK: Private properties
-    private var containerView: TFViewContainer?
-    private let isKeyboardAvoiding: Bool
-    private var contentSizeObservation: NSKeyValueObservation?
-    
-    var viewModel: ViewModel? {
-        didSet {
-            renderViewModel()
-            guard let viewModel = viewModel else { return }
-            adjustContentForSafeAreaEdges = viewModel.adjustContentForSafeAreaEdges
-            insets = viewModel.insets
-            if #available(iOS 11.0, *) {
-                contentInsetAdjustmentBehavior = .never
-            }
-        }
+    // MARK: Open properties
+    open var axis: TFAxis = .vertical {
+        didSet { easy.reload() }
     }
-    var adjustContentForSafeAreaEdges: TFInsetEdges = .all {
+    open var views: [View] = [] {
+        didSet { stackView.set(elements: views) }
+    }
+    open var adjustContentForSafeAreaEdges: TFInsetEdges = .all {
         didSet { setInsetsWithSafeAreaEdgesThatAreProvided() }
     }
-    var insets: UIEdgeInsets = .zero {
+    open var insets: UIEdgeInsets = .zero {
         didSet { setInsetsWithSafeAreaEdgesThatAreProvided() }
     }
     open override var delaysContentTouches: Bool {
         didSet { didManuallySetDelaysContentTouches = true }
     }
     
-    /// If the ViewModel.Content is set to elements, this is the stackview the elements are wrapped in
-    var stackView: UIStackView? { containerView?.containedView as? UIStackView }
+    // MARK: Private properties
+    private lazy var viewContainer: TFViewContainer = makeViewContainer()
+    private lazy var stackView: UIStackView = makeStackView()
+    
+    private let isKeyboardAvoiding: Bool
+    private var contentSizeObservation: NSKeyValueObservation?
     
     private var didManuallySetDelaysContentTouches = false
     
@@ -95,7 +91,10 @@ open class TFScrollView: UIScrollView, UpdatableView {
 public extension TFScrollView {
     
     func update(with viewModel: ViewModel?) {
-        self.viewModel = viewModel
+        self.views = viewModel?.views ?? self.views
+        self.insets = viewModel?.insets ?? self.insets
+        self.axis = viewModel?.axis ?? self.axis
+        self.adjustContentForSafeAreaEdges = viewModel?.adjustContentForSafeAreaEdges ?? self.adjustContentForSafeAreaEdges
     }
 }
 
@@ -110,19 +109,8 @@ public extension TFScrollView {
 // MARK: Private update methods
 private extension TFScrollView {
     
-    func renderViewModel() {
-        guard let viewModel = viewModel else {
-            subviews.forEach({ $0.removeFromSuperview() })
-            return
-        }
-        let containerView = TFViewContainer(with: makeView(for: viewModel))
-        setup(with: containerView, axis: viewModel.axis)
-        self.containerView = containerView
-    }
-    
     func setInsetsWithSafeAreaEdgesThatAreProvided() {
-        guard let containerView = containerView else { return }
-        containerView.insets = insets + tfSafeAreaInsets.filtered(by: adjustContentForSafeAreaEdges)
+        viewContainer.insets = insets + tfSafeAreaInsets.filtered(by: adjustContentForSafeAreaEdges)
     }
     
     private func makeView(for viewModel: ViewModel) -> UIView {
@@ -138,7 +126,17 @@ private extension TFScrollView {
 private extension TFScrollView {
     
     func setup() {
+        setScrollIndicatorsHidden(true)
         backgroundColor = .clear
+        addSubview(viewContainer)
+        viewContainer.easy.layout(
+            Edges(),
+            CenterX().when({ [weak self] in self?.axis == .vertical }),
+            Width(*1).like(self, .width).when({ [weak self] in self?.axis == .vertical }),
+            CenterY().when({ [weak self] in self?.axis == .horizontal }),
+            Height(*1).like(self, .width).when({ [weak self] in self?.axis == .horizontal })
+        )
+        if #available(iOS 11.0, *) { contentInsetAdjustmentBehavior = .never }
         if isKeyboardAvoiding { setupKeyboardAvoiding() }
         contentSizeObservation = observe(\.contentSize, changeHandler: { [weak self] _, _ in
             guard let self = self, !self.didManuallySetDelaysContentTouches else { return }
@@ -146,9 +144,21 @@ private extension TFScrollView {
             self.didManuallySetDelaysContentTouches = false
         })
     }
+    
+    func makeViewContainer() -> TFViewContainer {
+        let viewContainer = TFViewContainer(with: stackView)
+        return viewContainer
+    }
+    
+    func makeStackView() -> UIStackView {
+        let stackView = UIStackView(axis: axis, spacing: 0, elements: views)
+        return stackView
+    }
 }
 
 public extension TFScrollView {
+    
+    typealias View = UIStackView.Element
     
     /**
      - parameter content: The view(s) to stack in the scrollView
@@ -157,7 +167,7 @@ public extension TFScrollView {
      - parameter adjustContentForSafeAreaEdges: The safe area edges to which the content will adjust (with contentInset). Defaults to .all, which is generally what you want for a regular layout.
      */
     struct ViewModel: Equatable {
-        let views: [UIStackView.Element]
+        let views: [View]
         let axis: TFAxis
         let insets: UIEdgeInsets
         let adjustContentForSafeAreaEdges: TFInsetEdges
@@ -167,6 +177,15 @@ public extension TFScrollView {
             self.axis = axis
             self.insets = insets
             self.adjustContentForSafeAreaEdges = adjustContentForSafeAreaEdges
+        }
+        
+        func with(views: [View]) -> ViewModel {
+            return ViewModel(
+                views: views,
+                axis: axis,
+                insets: insets,
+                adjustContentForSafeAreaEdges: adjustContentForSafeAreaEdges
+            )
         }
     }
 }
