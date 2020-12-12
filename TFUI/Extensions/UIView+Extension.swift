@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import EasyPeasy
 
-extension UIView {
+public extension UIView {
     
     var width: CGFloat { bounds.width }
     var height: CGFloat { bounds.height }
@@ -26,6 +27,11 @@ extension UIView {
     convenience init(backgroundColor: UIColor) {
         self.init(frame: .zero)
         self.backgroundColor = backgroundColor
+    }
+    
+    func fill(with view: UIView, insets: UIEdgeInsets = .zero) {
+        self.setSubviews(view)
+        view.easy.layout(Edges(insets))
     }
     
     func removeAllSubViews() {

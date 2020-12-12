@@ -18,8 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        view.addSubview(scrollView)
-        scrollView.easy.layout(Edges())
+        view.fill(with: scrollView)
         scrollView.insets = .all(20)
         scrollView.views = [
             .view(UILabel("title", size: 42)),

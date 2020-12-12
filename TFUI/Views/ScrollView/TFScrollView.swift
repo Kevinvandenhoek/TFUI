@@ -128,9 +128,8 @@ private extension TFScrollView {
     func setup() {
         setScrollIndicatorsHidden(true)
         backgroundColor = .clear
-        addSubview(viewContainer)
+        fill(with: viewContainer)
         viewContainer.easy.layout(
-            Edges(),
             CenterX().when({ [weak self] in self?.axis == .vertical }),
             Width(*1).like(self, .width).when({ [weak self] in self?.axis == .vertical }),
             CenterY().when({ [weak self] in self?.axis == .horizontal }),
