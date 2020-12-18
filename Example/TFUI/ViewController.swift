@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EasyPeasy
 import TFUI
 
 class ViewController: UIViewController {

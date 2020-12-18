@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TFUI'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TFUI.'
+  s.summary          = 'A SwiftUI-like UIKit library'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  With TFUI you can easily set up ScrollViews, TableViews and CollectionViews in a SwiftUI like declarative manner, with little to no boilerplate!
                        DESC
 
   s.homepage         = 'https://github.com/kevinvandenhoek@gmail.com/TFUI'
