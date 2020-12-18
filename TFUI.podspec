@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   With TFUI you can easily set up ScrollViews, TableViews and CollectionViews in a SwiftUI like declarative manner, with little to no boilerplate!
                        DESC
 
-  s.homepage         = 'https://github.com/kevinvandenhoek@gmail.com/TFUI'
+  s.homepage         = 'https://github.com/Kevinvandenhoek/TFUI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kevinvandenhoek@gmail.com' => 'k.vandenhoek@wearetriple.com' }
-  s.source           = { :git => 'https://github.com/kevinvandenhoek@gmail.com/TFUI.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Kevinvandenhoek/TFUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
