@@ -100,7 +100,8 @@
 
 /* Begin PBXFileReference section */
 		0124FC7B1C73ABEE5F3CEB59FBD09243 /* TFInsetEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFInsetEdges.swift; sourceTree = "<group>"; };
-		02FB9726DA8E6738525D4DD2FBAFA441 /* Pods_TFUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFUI_Tests.framework; path = "Pods-TFUI_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FB9726DA8E6738525D4DD2FBAFA441 /* Pods_TFUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A04A74325C59DA100632D6D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../../Package.swift; sourceTree = "<group>"; };
 		0A68B774E7458A7ACD47B2A472DD11EE /* Pods-TFUI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFUI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0AF04634DCB8447EB1A88EBC342963F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1651844F1E617455C609AE1F03E647A6 /* CompoundAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundAttribute.swift; path = EasyPeasy/CompoundAttribute.swift; sourceTree = "<group>"; };
@@ -114,7 +115,7 @@
 		2DC1FC94CBB5AF1B57B3C3EA30E6C957 /* EasyPeasy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyPeasy.modulemap; sourceTree = "<group>"; };
 		2DD5D59150055BA96ADB21360E1714A5 /* Pods-TFUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		30D1C93FD2074A18B1FFB6E6AEE19AFF /* TFSpacer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFSpacer.swift; sourceTree = "<group>"; };
-		322A8F4192F8CF7D953100548E063BE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		322A8F4192F8CF7D953100548E063BE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3523DD5066843FD2876BADA2BFA7DB2D /* TFInterpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFInterpolatable.swift; sourceTree = "<group>"; };
 		3587B72797AFC18385FE5DB948648A3B /* Pods-TFUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		36CE0F7AB451E9E62705D8E72D19C7A2 /* NSLayoutGuide+Easy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutGuide+Easy.swift"; path = "EasyPeasy/NSLayoutGuide+Easy.swift"; sourceTree = "<group>"; };
@@ -139,24 +140,24 @@
 		64A0D4A88F6F278017EF5240A2355E41 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		656748E6563058CCCFC36A0465FB2407 /* Item+AppKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Item+AppKit.swift"; path = "EasyPeasy/Item+AppKit.swift"; sourceTree = "<group>"; };
 		69A2EC052EC50126DA345CB0D27AD763 /* DimensionAttribute+AppKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DimensionAttribute+AppKit.swift"; path = "EasyPeasy/DimensionAttribute+AppKit.swift"; sourceTree = "<group>"; };
-		6DE0309D47A4CF5E31DFDEAF7C52B2AD /* Pods_TFUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFUI_Example.framework; path = "Pods-TFUI_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE0309D47A4CF5E31DFDEAF7C52B2AD /* Pods_TFUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3EB8ABC7C05F4BD24E47B35EEB94AC /* ReferenceAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceAttribute.swift; path = EasyPeasy/ReferenceAttribute.swift; sourceTree = "<group>"; };
 		71C1F928339D611984A6F7C2BF13A38F /* UIEdgeInsets+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+extension.swift"; sourceTree = "<group>"; };
 		7DB363160C15E99ECF5A266ABA564213 /* PositionAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PositionAttribute.swift; path = EasyPeasy/PositionAttribute.swift; sourceTree = "<group>"; };
 		7F164B49AE09F15E5648CC51DF8E0E99 /* TFUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFUI-umbrella.h"; sourceTree = "<group>"; };
 		800E4A15B23BEB3CE352751738683F7E /* CGPoint+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		82F1AF11C1DF54D449F354D5A8189C4A /* Constant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = EasyPeasy/Constant.swift; sourceTree = "<group>"; };
-		8328E6FCAC1E4D4E635FEAE69D63A19E /* EasyPeasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyPeasy.framework; path = EasyPeasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8328E6FCAC1E4D4E635FEAE69D63A19E /* EasyPeasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyPeasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8830E7A853D7A70C322C37F675F89166 /* EasyPeasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyPeasy.release.xcconfig; sourceTree = "<group>"; };
-		899BA7011D8829FD75B2FF2BC6EFE887 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		89B687BCE77FFA5D7AE0E1AB3F072E23 /* TFUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TFUI.framework; path = TFUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		899BA7011D8829FD75B2FF2BC6EFE887 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		89B687BCE77FFA5D7AE0E1AB3F072E23 /* TFUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TFUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96051B553553E031442BB9AD3C6F4568 /* TFUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TFUI.modulemap; sourceTree = "<group>"; };
 		9B1A69AC9E6886DCD694C006B1C67E56 /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = EasyPeasy/Node.swift; sourceTree = "<group>"; };
 		9C4D280F08AF55A198AE31CEA8CBE795 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		9D0B7D7753CD579A1CA58A2A961576A8 /* EasyPeasy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyPeasy-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2C1A111A171A9A02ACF4F9C3011293A /* Pods-TFUI_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFUI_Example-umbrella.h"; sourceTree = "<group>"; };
-		A480511F07DF71640E56C05371297B24 /* TFUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TFUI.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A480511F07DF71640E56C05371297B24 /* TFUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TFUI.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB4FD195D35355B8AECBB6245946C62C /* Pods-TFUI_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFUI_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AFB4E8296C408A22C74CA63B99395A6C /* Array+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		B13C52BFD961DB3A5E9CE2BD904FA540 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -247,7 +248,6 @@
 				382E7CA1FAA655B506AE291CA4CD7822 /* TFScrollViewFiller.swift */,
 				9C4D280F08AF55A198AE31CEA8CBE795 /* UIScrollView+Extension.swift */,
 			);
-			name = ScrollView;
 			path = ScrollView;
 			sourceTree = "<group>";
 		};
@@ -305,7 +305,6 @@
 			children = (
 				64A0D4A88F6F278017EF5240A2355E41 /* UIStackView+Extension.swift */,
 			);
-			name = StackView;
 			path = StackView;
 			sourceTree = "<group>";
 		};
@@ -350,7 +349,6 @@
 				3D72155BE2610535EECC0A2CA05E5EC2 /* UIView+Easy.swift */,
 				8C57EBABC93ACD608B02B44C4DA88FEA /* Support Files */,
 			);
-			name = EasyPeasy;
 			path = EasyPeasy;
 			sourceTree = "<group>";
 		};
@@ -410,7 +408,6 @@
 			children = (
 				30D1C93FD2074A18B1FFB6E6AEE19AFF /* TFSpacer.swift */,
 			);
-			name = Spacer;
 			path = Spacer;
 			sourceTree = "<group>";
 		};
@@ -419,7 +416,6 @@
 			children = (
 				DF0F646607226D97871128FAB3A1EF68 /* TFViewContainer.swift */,
 			);
-			name = ViewContainer;
 			path = ViewContainer;
 			sourceTree = "<group>";
 		};
@@ -452,6 +448,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				0A04A74325C59DA100632D6D /* Package.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				2D6DE71E0EA6992C48A4F8DECA98DDF8 /* Development Pods */,
 				CBA56494BA8B6E8370C3ADBBA3975AE9 /* Frameworks */,
@@ -1154,8 +1151,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
